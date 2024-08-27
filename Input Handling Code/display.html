@@ -1,0 +1,33 @@
+<!--FOR DEMO USE ONLY! WILL BE DELETED LATER.-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discrete Math Quiz</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        .question, .answer {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="question-display" class="question"></div>
+        <textarea id="latex-input" class="answer" placeholder="Type your LATEX input here..."></textarea>
+        <div id="output"></div>
+        <div id="result" class="result"></div>
+    </div>
+    <button id="submit-button">Submit</button>
+
+    <script src="parser.js"></script> 
+</body>
+</html>
