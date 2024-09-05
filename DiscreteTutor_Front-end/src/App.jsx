@@ -6,6 +6,7 @@ import Learn from './pages/learn.jsx';
 import Dashboard from './pages/dashboard.jsx';
 import Login from './pages/login.jsx';
 import Register from './pages/register.jsx';
+import logo from './assets/logo.jpg';
 
 function App() {
   // Generate the routing element tree
@@ -36,7 +37,7 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <h1>DiscreteTutor (Name Pending)</h1>
+          <img src={logo} alt="DiscreteTutor Logo" className="logo" />
           <div className="nav">
             <Link to="/"><button className="HeaderButton">Learn</button></Link>
             <Link to="/dashboard"><button className="HeaderButton">Dashboard</button></Link>

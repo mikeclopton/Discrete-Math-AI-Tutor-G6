@@ -20,23 +20,22 @@ body, html {
 }
 
 .App-header {
-  background-color: #002244; /* Blue background for header */
+  background-color: #0F2D44; 
   padding: 10px 20px;
-  text-align: center;
-  width: 100%;
-  position: relative;
+  width: 1200px; 
+  max-width: 100%; 
+  margin: 0 auto; 
   box-sizing: border-box;
-  height: 70px;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+
 .nav {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
+  gap: 15px;
 }
 
 .HeaderButton, .nav-link {
@@ -79,4 +78,8 @@ body, html {
 
 h1 {
   margin: 0;
+}
+.logo {
+  width: 150px; /* Adjust size to fit your layout */
+  height: auto;
 }
