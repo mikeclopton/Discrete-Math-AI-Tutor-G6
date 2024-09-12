@@ -9,6 +9,36 @@ headers = {
     'Content-Type': 'application/json',
 }
 
+# Get user ID based on the email address
+def get_user_id(email):
+    url = f"{SUPABASE_URL}/rest/v1/users?email=eq.{email}&select=id"
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        user_data = response.json()
+        if user_data:
+            return user_data[0]['id']  # Assuming email is unique and we return the user ID
+        else:
+            return None
+    else:
+        print(f"Error fetching user ID: {response.json()}")
+        return None
+
+# Fetch user progress by user_id
+def get_progress(user_id):
+    url = f"{SUPABASE_URL}/rest/v1/progress?user_id=eq.{user_id}&select=module_id,progress"
+    
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
+        progress_data = response.json()
+        return progress_data  # Returns progress data as a list of dictionaries
+    else:
+        print(f"Error fetching progress: {response.json()}")
+        return None
+
+# Update user progress
 def update_progress(user_id, module_id, progress):
     url = f"{SUPABASE_URL}/rest/v1/progress"
     payload = {
@@ -23,6 +53,3 @@ def update_progress(user_id, module_id, progress):
         print(f"Progress updated for user {user_id}, module {module_id}")
     else:
         print("Error updating progress:", response.json())
-
-# Example usage
-update_progress(1, 101, 50)

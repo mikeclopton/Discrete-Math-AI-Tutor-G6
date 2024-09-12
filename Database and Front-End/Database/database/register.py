@@ -20,9 +20,6 @@ def register_user(email, password, role='student'):
     
     if response.status_code == 200:
         print(f"User {email} registered successfully")
-        # You can add additional logic to insert user role using another table if needed.
+        # Additional logic for setting user role can go here.
     else:
         print("Error:", response.json())
-
-# Example usage
-register_user('example@example.com', 'password123')

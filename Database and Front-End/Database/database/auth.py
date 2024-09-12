@@ -25,8 +25,8 @@ def authenticate_user(email, password):
         print("Authentication failed")
         return False
 
-# Example usage
-if authenticate_user('example@example.com', 'password123'):
-    print("Login successful")
-else:
-    print("Login failed")
+# Remove or comment out the example usage to avoid automatic execution
+# if authenticate_user('example@example.com', 'password123'):
+#     print("Login successful")
+# else:
+#     print("Login failed")
